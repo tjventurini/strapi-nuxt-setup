@@ -10,5 +10,8 @@ git clone https://github.com/tjventurini/wordpress-setup.git $PROJECT_DIR
 # Enter project dir
 cd $PROJECT_DIR
 
+# Remove git repository
+rm -rf .git
+
 # Final message
 echo "Done! 🚀"
