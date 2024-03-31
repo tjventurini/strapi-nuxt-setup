@@ -50,12 +50,13 @@ services:
     container_name: nuxt
     user: ${UID}:${GID}
     build:
-      dockerfile: ../docker/nuxt/Dockerfile
       context: ./nuxt
+      dockerfile: ../docker/nuxt/Dockerfile
     restart: unless-stopped
     env_file: .env
-    # volumes:
-    #   - ./nuxt:/app
+    volumes:
+      - ./nuxt:/app
+    command: ./entrypoint.local.sh
     labels:
       # enable traefik
       - "traefik.enable=true"

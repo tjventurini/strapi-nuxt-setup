@@ -47,6 +47,29 @@ services:
     depends_on:
       - strapidb
 
+  nuxt:
+    container_name: nuxt
+    user: ${UID}:${GID}
+    build:
+      dockerfile: ../docker/nuxt/Dockerfile
+      context: ./nuxt
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./nuxt:/app
+    command: ./entrypoint.prod.sh
+    labels:
+      # enable traefik
+      - "traefik.enable=true"
+      - "traefik.docker.network=reverse-proxy"
+      # http
+      - "traefik.http.routers.nuxt.rule=Host(`${DOMAIN}`)"
+      - "traefik.http.routers.nuxt.entrypoints=web"
+    networks:
+      - frontend
+    depends_on:
+      - strapi
+
   strapidb:
     container_name: strapidb
     platform: linux/amd64 #for platform error on Apple M1 chips
