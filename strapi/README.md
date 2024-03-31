@@ -4,16 +4,6 @@ Strapi comes with a full featured [Command Line Interface](https://docs.strapi.i
 
 In addition to the strapi CLI, this repository includes a Makefile that let's you execute basic commands to manage the docker environment that comes with this repository.
 
-## 🧰 Makefile
-
-- `make init` - Initialize the development environment by copying .env.example to .env and linking the local docker-compose file.
-- `make init-prod` - Initialize the production environment by copying .env.example to .env and linking the production docker-compose file.  
-- `make up` - Start the docker containers in the background.
-- `make down` - Stop and remove the docker containers.
-- `make build` - Build the docker images without using cache.
-- `make restart` - Restart the docker containers.
-- `make tail` - View and follow the container logs.
-
 ## ⚙️ Deployment
 
 Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
