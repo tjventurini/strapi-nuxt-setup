@@ -33,6 +33,7 @@ services:
       PORT: ${STRAPI_PORT}
     volumes:
       - ./strapi:/opt/app
+    command: ./entrypoint.local.sh
     labels:
       # enable traefik
       - "traefik.enable=true"
