@@ -18,11 +18,4 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  //   markdownit: {
-  //     runtime: true, // Support `$md()`
-  //     preset: 'default',
-  //     linkify: true,
-  //     breaks: true,
-  //     use: ['markdown-it-div', 'markdown-it-attrs'],
-  //   },
 })

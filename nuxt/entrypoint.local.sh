@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-npm ci || npm install
+npm install
 npm run dev
