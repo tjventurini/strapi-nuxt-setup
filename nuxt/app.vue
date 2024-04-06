@@ -2,9 +2,10 @@
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+  <h1>List of Pages</h1>
   <ul>
     <li v-for="page in pages?.data" :key="page.id">
-      Title: {{ page.attributes.attributes.title }}
+      Title: {{ page.attributes.title }}
     </li>
   </ul>
 </template>
@@ -13,11 +14,10 @@
 import type { Page } from '@/types/page'
 
 const { find } = useStrapi()
-
 const {
   data: pages,
   pending,
   refresh,
   error,
-} = await useAsyncData('pages', () => find<Page>('pages'))
+} = await useAsyncData('pages', () => find<Page>('pages') /**/)
 </script>
