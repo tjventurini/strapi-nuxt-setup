@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     port: 3000,
   },
   strapi: {
-    url: 'strapi',
+    url: process.env.STRAPI_URL,
   },
   css: ['@/assets/css/tailwind.css'],
   postcss: {

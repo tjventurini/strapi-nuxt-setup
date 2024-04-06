@@ -54,8 +54,7 @@ services:
       context: ./nuxt
       dockerfile: ../docker/nuxt/Dockerfile
     environment:
-      STRAPI_URL: http://strapi
-      STRAPI_API_URL: http://strapi/api
+      STRAPI_URL: http://admin.${DOMAIN}
     restart: unless-stopped
     env_file: .env
     volumes:
