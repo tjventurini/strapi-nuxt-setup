@@ -6,7 +6,6 @@ networks:
     external: true
     driver: ${NETWORKS_DRIVER}
   backend:
-    name: Strapi
     driver: ${NETWORKS_DRIVER}
 
 services:
