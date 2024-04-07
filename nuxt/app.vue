@@ -4,6 +4,7 @@
   </NuxtLayout>
   <p>Status: {{ status }}</p>
   <p>Error: {{ pagesError?.statusCode }}</p>
+  <p>Error-Message: {{ pagesError?.message }}</p>
   <ul>
     <li v-for="page in pages?.data">Title: {{ page.attributes.title }}</li>
   </ul>
@@ -21,8 +22,4 @@ const {
   refresh,
   error: pagesError,
 } = await useAsyncData('pages', () => find<Page>('pages'))
-
-watch(pages, () => {
-  console.log('pages changed', pages)
-})
 </script>
