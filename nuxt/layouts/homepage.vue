@@ -1,12 +1,11 @@
 <template>
   <div class="homepage">
-    <h1>Homepage Layout</h1>
-    <!-- <DynamicZone :data="homepage" /> -->
+    <h1>{{ homepage.data[0]?.attributes.title }}</h1>
+    <!-- <DynamicZone :data="homepage.data[0]?.attributes.sections" /> -->
     <slot />
   </div>
 </template>
 <script setup lang="ts">
 const { getHomepage } = useHomepage()
-// const homepage = await getHomepage()
-// console.log(homepage)
+const { homepage } = await getHomepage()
 </script>

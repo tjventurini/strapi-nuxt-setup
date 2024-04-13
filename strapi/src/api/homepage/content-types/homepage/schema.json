@@ -12,11 +12,11 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "Sections": {
+    "sections": {
       "type": "dynamiczone",
       "components": [
         "sections.hero-text-section"

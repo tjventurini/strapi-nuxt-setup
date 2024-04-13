@@ -800,8 +800,8 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     draftAndPublish: false;
   };
   attributes: {
-    Title: Attribute.String & Attribute.Required;
-    Sections: Attribute.DynamicZone<['sections.hero-text-section']>;
+    title: Attribute.String & Attribute.Required;
+    sections: Attribute.DynamicZone<['sections.hero-text-section']>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
