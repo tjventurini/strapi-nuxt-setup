@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_hero_text_sections",
+  "info": {
+    "displayName": "Hero Text Section",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Subtitle": {
+      "type": "text"
+    },
+    "Button": {
+      "displayName": "Buttons",
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.buttons"
+    }
+  }
+}

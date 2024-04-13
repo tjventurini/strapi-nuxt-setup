@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_elements_buttons",
+  "info": {
+    "displayName": "Buttons",
+    "icon": "cursor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Label": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string"
+    },
+    "Link": {
+      "type": "string"
+    }
+  }
+}

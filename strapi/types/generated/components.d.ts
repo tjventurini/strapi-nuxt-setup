@@ -1,18 +1,37 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
-export interface ContentContent extends Schema.Component {
-  collectionName: 'components_content_contents';
+export interface ElementsButtons extends Schema.Component {
+  collectionName: 'components_elements_buttons';
   info: {
-    displayName: 'Content';
+    displayName: 'Buttons';
+    icon: 'cursor';
     description: '';
   };
-  attributes: {};
+  attributes: {
+    Label: Attribute.String & Attribute.Required;
+    icon: Attribute.String;
+    Link: Attribute.String;
+  };
+}
+
+export interface SectionsHeroTextSection extends Schema.Component {
+  collectionName: 'components_sections_hero_text_sections';
+  info: {
+    displayName: 'Hero Text Section';
+    icon: 'star';
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Subtitle: Attribute.Text;
+    Button: Attribute.Component<'elements.buttons', true>;
+  };
 }
 
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
-      'content.content': ContentContent;
+      'elements.buttons': ElementsButtons;
+      'sections.hero-text-section': SectionsHeroTextSection;
     }
   }
 }
