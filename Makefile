@@ -28,3 +28,6 @@ clear:
 
 ps:
 	docker compose ps
+
+login-nuxt:
+	docker compose exec nuxt sh
