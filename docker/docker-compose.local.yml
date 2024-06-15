@@ -15,7 +15,7 @@ services:
     build:
       context: ./strapi
       dockerfile: ../docker/strapi/local/Dockerfile
-    restart: unless-stopped
+    restart: no
     env_file: .env
     environment:
       DATABASE_CLIENT: ${DATABASE_CLIENT}
@@ -74,7 +74,7 @@ services:
   strapidb:
     container_name: strapidb
     platform: linux/amd64 #for platform error on Apple M1 chips
-    restart: unless-stopped
+    restart: no
     env_file: .env
     image: postgres:12.0-alpine
     environment:
